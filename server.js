@@ -5,7 +5,7 @@ const multer = require('multer');
 const sharp = require('sharp');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 
 // Statisches Verzeichnis, in dem die Webseite (HTML, CSS) liegt
 app.use(express.static(path.join(__dirname, 'public')));
