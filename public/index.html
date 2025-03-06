@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Moderne Bildbearbeitung</title>
+  <!-- Google Fonts: Montserrat und Open Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Bildbearbeitung</h1>
+    <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="image">Bild auswählen <span>*</span></label>
+        <input type="file" name="image" id="image" required>
+      </div>
+      <div class="form-group">
+        <label for="background">Hintergrund (optional)</label>
+        <input type="file" name="background" id="background">
+      </div>
+      <div class="form-group">
+        <label for="overlay">Overlay (optional)</label>
+        <input type="file" name="overlay" id="overlay">
+      </div>
+      <div class="form-group">
+        <label for="aspectRatio">Seitenverhältnis (z.B. 3:4 oder auto)</label>
+        <input type="text" name="aspectRatio" id="aspectRatio" placeholder="auto oder 3:4">
+      </div>
+      <div class="form-group">
+        <label for="quality">Qualität</label>
+        <select name="quality" id="quality">
+          <option value="thumbnail">Thumbnail</option>
+          <option value="hd">HD</option>
+          <option value="fullhd" selected>FullHD</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="rotation">Rotation (Grad)</label>
+        <input type="number" name="rotation" id="rotation" value="0">
+      </div>
+      <div class="form-group checkbox-group">
+        <label><input type="checkbox" name="flip" id="flip" value="true"> Flip</label>
+        <label><input type="checkbox" name="flop" id="flop" value="true"> Flop</label>
+      </div>
+      <button type="submit" id="submitButton">Bild verarbeiten</button>
+    </form>
+    <!-- Vorschau des ausgewählten Bildes -->
+    <div id="preview"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
