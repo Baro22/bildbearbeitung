@@ -27,7 +27,8 @@ html{
   }
   
   .container-header {
-    max-width: 100%;
+    
+    position: relative;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -45,6 +46,12 @@ html{
     display: flex;
     gap: 1.5rem;
     margin-right: 230px;
+  }
+  
+  .section-header nav{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
   
   .site-header nav ul li a {
@@ -446,6 +453,9 @@ html{
     }
     .site-header nav ul li a{
       font-size: 1.5rem;
+    }
+    .site-header nav ul{
+      margin: 0;
     }
     .mode-toggle{
       font-size: 1.2rem;
