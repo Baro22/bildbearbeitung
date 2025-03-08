@@ -27,7 +27,7 @@ html{
   }
   
   .container-header {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -152,6 +152,9 @@ html{
   }
   
   .feature-card {
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
     background: #f9f9f9;
     border-radius: 12px;
     padding: 1.5rem;
@@ -167,11 +170,6 @@ html{
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
-  }
-  
-  .feature-card p {
-    font-size: 1rem;
-    color: #666;
   }
   
   /* Form Section */
@@ -303,11 +301,12 @@ html{
     padding: 1.5rem;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 250px;
+    width: fit-content;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
   }
-  
+
+
   .contact-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
@@ -319,10 +318,6 @@ html{
     color: #4e54c8;
   }
   
-  .contact-card p {
-    font-size: 1rem;
-    color: #555;
-  }
   
   /* Footer */
   footer {
@@ -424,6 +419,10 @@ html{
   body.dark-mode button[type="submit"]:hover {
     background: #777;
   }
+
+  body.dark-mode .kontakt-section{
+    background:#333;
+  }
   
   body.dark-mode .contact-card {
     background: #333;
@@ -438,4 +437,16 @@ html{
   body.dark-mode footer {
     background: #111;
   }
-  
+
+
+  @media screen and (max-width: 1000px) {
+    .container-header{
+      height: 5rem;
+    }
+    .site-header nav ul li a{
+      font-size: 1.5rem;
+    }
+    .mode-toggle{
+      font-size: 1.2rem;
+    }
+    }
