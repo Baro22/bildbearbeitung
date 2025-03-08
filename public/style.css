@@ -44,6 +44,7 @@ html{
     list-style: none;
     display: flex;
     gap: 1.5rem;
+    margin-right: 230px;
   }
   
   .site-header nav ul li a {
